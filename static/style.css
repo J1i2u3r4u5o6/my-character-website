@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Microsoft JhengHei", Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* 首頁背景 */
+.home-page {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                url("/static/images/home_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 首頁封面內容 */
+.cover {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.cover h1 {
+    font-size: 56px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.cover p {
+    font-size: 22px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* 首頁按鈕 */
+.button-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main-button {
+    text-decoration: none;
+    color: white;
+    background-color: #6c5ce7;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background-color: #a29bfe;
+    transform: scale(1.05);
+}
+
+/* 上方導覽列 */
+nav {
+    background-color: #2d3436;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: #ffeaa7;
+}
+
+/* 頁面標題 */
+.page-title {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 42px;
+}
+
+/* 卡片區 */
+.card-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* 卡片 */
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h2 {
+    color: #6c5ce7;
+    margin-top: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* 角色圖片 */
+.character-img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    display: block;
+    background-color: white;
+}
+
+/* 故事大綱區 */
+.story-box {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 35px;
+    border-radius: 20px;
+    font-size: 20px;
+    line-height: 1.8;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* 手機版調整 */
+@media (max-width: 600px) {
+    .cover h1 {
+        font-size: 36px;
+    }
+
+    .cover p {
+        font-size: 18px;
+        padding: 0 20px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .main-button {
+        font-size: 18px;
+        padding: 12px 25px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .page-title {
+        font-size: 34px;
+    }
+
+    .story-box {
+        width: 90%;
+        font-size: 18px;
+        padding: 25px;
+    }
+
+    .character-img {
+        height: 300px;
+        object-fit: contain;
+    }
+}
